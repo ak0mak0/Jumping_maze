@@ -192,6 +192,7 @@ class InterfaceScreen(Screen):
                 )))
                 self._dynamic_full_path.set_text("...")
                 self._dynamic_solved_path.set_text("...")
+                self._board.stop_animation()
 
         if self._button4.contains(mouse_pos):
             if self._actual_algorithm != 0:
@@ -208,6 +209,7 @@ class InterfaceScreen(Screen):
                     self._dynamic_name.set_child(Text("Uniform-Cost Search v2", self._engine.regular_font, (0, 0, 0)))
                 self._dynamic_full_path.set_text("...")
                 self._dynamic_solved_path.set_text("...")
+                self._board.stop_animation()
 
         if self._apply_algorithm.contains(mouse_pos):
             self._board.set_path(self._full_path_selected)
@@ -234,6 +236,7 @@ class InterfaceScreen(Screen):
                 )))
                 self._dynamic_full_path.set_text("...")
                 self._dynamic_solved_path.set_text("...")
+                self._board.stop_animation()
 
         if self._button6.contains(mouse_pos):
             if self._actual_algorithm != len(self._paths[0]) - 1:
@@ -250,6 +253,7 @@ class InterfaceScreen(Screen):
                     self._dynamic_name.set_child(Text("Uniform-Cost Search v2", self._engine.regular_font, (0, 0, 0)))
                 self._dynamic_full_path.set_text("...")
                 self._dynamic_solved_path.set_text("...")
+                self._board.stop_animation()
 
     def on_mouse_motion_event(self, event: MouseMotionEvent) -> None:
         pass

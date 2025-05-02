@@ -118,3 +118,8 @@ class Board(Element):
         self._animating = True
         self._path_index = 1
         self._last_update = pygame.time.get_ticks()
+
+    def stop_animation(self) -> None:
+        self._animating = False
+        self._path_index = 0
+        self._selected_position = self._path[0] if self._path else None
